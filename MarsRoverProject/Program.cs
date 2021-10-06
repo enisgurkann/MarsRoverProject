@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace MarsRoverProject
 {
@@ -6,11 +7,20 @@ namespace MarsRoverProject
     {
         static void Main(string[] args)
         {
+            Console.ForegroundColor = ConsoleColor.DarkRed;
             Console.WriteLine("Mars Rover Project!");
 
-            Console.WriteLine("Plato Max Point : ");
-            var maxPointRead = Console.Read(); 
+            Console.ForegroundColor = ConsoleColor.Cyan;
 
+            Console.Write("Plato Max Point : ");
+            var maxPoint = Console.ReadLine().Trim().Split(' ').ToList();
+
+            Console.Write("Start Position : ");
+            var startPosition = Console.ReadLine().Trim().Split().ToList();
+
+
+
+            Console.ReadLine();
 
         }
     }
