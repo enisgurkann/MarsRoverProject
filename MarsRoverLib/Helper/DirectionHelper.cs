@@ -1,4 +1,5 @@
 ﻿using MarsRoverLib.Enums;
+using MarsRoverLib.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,6 +35,20 @@ namespace MarsRoverLib.Helper
                 return Directions.South;
             else
                 return null;
+        }
+
+        public static DirectionMoveModel MoveDirection(DirectionMoveModel model, Directions direction)
+        {
+            if (direction == Directions.North)
+                model.Y += 1;
+            else if (direction == Directions.South)
+                model.Y -= 1;
+            else if (direction == Directions.East)
+                model.X += 1;
+            else if (direction == Directions.West)
+                model.X -= 1;
+
+            return model;
         }
 
     }

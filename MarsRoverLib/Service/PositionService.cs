@@ -1,4 +1,5 @@
 ﻿using MarsRoverLib.Enums;
+using MarsRoverLib.Helper;
 using MarsRoverLib.Models;
 using MarsRoverLib.Service;
 using System;
@@ -22,7 +23,6 @@ namespace MarsRoverLib
 
                 if (step == 'M')
                 {
-
                 }
                 else if (step == 'L')
                 {
