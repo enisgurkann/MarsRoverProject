@@ -10,7 +10,7 @@ namespace MarsRoverLib.Helper
 {
     public static class DirectionHelper
     {
-        public static Directions? RotateRight(Directions Direction)
+        public static Directions RotateRight(Directions Direction)
         {
             if (Direction == Directions.North)
                 return Directions.East;
@@ -18,12 +18,10 @@ namespace MarsRoverLib.Helper
                 return Directions.West;
             else if (Direction == Directions.South)
                 return Directions.East;
-            else if (Direction == Directions.West)
+            else 
                 return Directions.North;
-            else
-                return null;
         }
-        public static Directions? RotateLeft(Directions Direction)
+        public static Directions RotateLeft(Directions Direction)
         {
             if (Direction == Directions.North)
                 return Directions.West;
@@ -31,14 +29,14 @@ namespace MarsRoverLib.Helper
                 return Directions.East;
             else if (Direction == Directions.East)
                 return Directions.North;
-            else if (Direction == Directions.West)
+            else 
                 return Directions.South;
-            else
-                return null;
+          
         }
 
-        public static DirectionMoveModel MoveDirection(DirectionMoveModel model, Directions direction)
+        public static DirectionMoveModel MoveDirection(int X,int Y, Directions direction)
         {
+            var model = new DirectionMoveModel() { X = X, Y = Y };
             if (direction == Directions.North)
                 model.Y += 1;
             else if (direction == Directions.South)
