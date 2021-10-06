@@ -3,22 +3,30 @@ using MarsRoverLib.Helper;
 using MarsRoverLib.Models;
 using MarsRoverLib.Service;
 using System;
+using System.Linq;
 
 namespace MarsRoverLib
 {
     public class PositionService : IPositionService
     {
-       
-        public PositionReturnModel Start(string maxPoints, string steps)
+        private int X, Y;
+        private Directions currentDirection;
+        public PositionService(int startX,int startY,Directions startDirection)
         {
-            int X = 0, Y = 0;
-            var currentDirection = Directions.North;
+            X = startX;
+            Y = startY;
+            currentDirection = startDirection;
+        }
+
+        public PositionReturnModel Start(string maxPoints, string moveCommands)
+        {
+            
 
             var model = new PositionReturnModel();
             model.Status = true;
 
             
-            foreach (var step in steps)
+            foreach (var step in moveCommands)
             {
 
                 if (step == 'M')
