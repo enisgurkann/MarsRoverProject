@@ -39,20 +39,16 @@ namespace MarsRoverProject
                 Console.Write("Move Commands : ");
                 string moveCommands = Console.ReadLine();
 
-                var model = _service.Start(maxPoint, moveCommands);
-
-                if (model.Status)
-                    Console.ForegroundColor = ConsoleColor.DarkRed;
-                else
-                    Console.ForegroundColor = ConsoleColor.Cyan;
-
-                Console.WriteLine(model.Message);
-
-
+                try
+                {
+                    var locationMessage = _service.Start(maxPoint, moveCommands);
+                    Console.WriteLine(locationMessage);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
             }
-
-
-
 
 
             Console.ReadLine();

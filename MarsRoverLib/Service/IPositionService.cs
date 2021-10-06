@@ -10,6 +10,6 @@ namespace MarsRoverLib.Service
 {
     public interface IPositionService
     {
-        PositionReturnModel Start(string maxPoints,string moveCommands);
+        string Start(string maxPoints,string moveCommands);
     }
 }

@@ -18,14 +18,9 @@ namespace MarsRoverLib
             currentDirection = startDirection;
         }
 
-        public PositionReturnModel Start(string maxPoints, string moveCommands)
+        public string Start(string maxPoints, string moveCommands)
         {
-            
 
-            var model = new PositionReturnModel();
-            model.Status = true;
-
-            
             foreach (var step in moveCommands)
             {
 
@@ -40,13 +35,11 @@ namespace MarsRoverLib
                 else if (step == 'R')
                     currentDirection = DirectionHelper.RotateRight(currentDirection);
                 else
-                   return new PositionReturnModel() { Message = $"{step} karakteri geçersiz",Status = false } ;
+                    throw new Exception($"{step} karakteri geçersiz");
             }
 
 
-
-
-            return model;
+            return $"{X} {Y} {currentDirection.ToString()}";
         }
     }
 }
