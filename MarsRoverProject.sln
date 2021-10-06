@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MarsRoverProject", "MarsRov
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MarsRoverLib", "MarsRoverLib\MarsRoverLib.csproj", "{6D53B0AC-8ED2-4196-8445-88E34DDB2A12}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarsRoverProjectTest", "MarsRoverProjectTest\MarsRoverProjectTest.csproj", "{4C8DF56B-0B8E-4406-B9AE-6200207C1622}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{6D53B0AC-8ED2-4196-8445-88E34DDB2A12}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D53B0AC-8ED2-4196-8445-88E34DDB2A12}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D53B0AC-8ED2-4196-8445-88E34DDB2A12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C8DF56B-0B8E-4406-B9AE-6200207C1622}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C8DF56B-0B8E-4406-B9AE-6200207C1622}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C8DF56B-0B8E-4406-B9AE-6200207C1622}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C8DF56B-0B8E-4406-B9AE-6200207C1622}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

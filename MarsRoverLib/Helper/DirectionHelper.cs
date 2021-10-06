@@ -16,8 +16,8 @@ namespace MarsRoverLib.Helper
                 return Directions.East;
             else if (Direction == Directions.South)
                 return Directions.West;
-            else if (Direction == Directions.South)
-                return Directions.East;
+            else if (Direction == Directions.East)
+                return Directions.South;
             else 
                 return Directions.North;
         }
