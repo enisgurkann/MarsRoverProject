@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MarsRoverLib.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,6 @@ namespace MarsRoverLib.Service
 {
     public interface IPositionService
     {
-        void Start(string maxPoints, string step);
+        PositionReturnModel Start(string maxPoints, string steps);
     }
 }
