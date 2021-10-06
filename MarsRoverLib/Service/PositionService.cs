@@ -36,7 +36,13 @@ namespace MarsRoverLib
                     currentDirection = DirectionHelper.RotateRight(currentDirection);
                 else
                     throw new Exception($"{step} karakteri geçersiz");
+
+                if (X < 0 || Y < 0 || X > maxPoints[0] || Y > maxPoints[1])
+                    throw new Exception($"Harita sınırlarını aşan bir işlem yaptınız!");
             }
+
+
+          
 
             string Direction = DirectionHelper.GetDirectionKey(currentDirection);
 
