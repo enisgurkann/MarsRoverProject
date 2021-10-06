@@ -1,5 +1,6 @@
 ﻿using MarsRoverLib;
 using MarsRoverLib.Enums;
+using MarsRoverLib.Helper;
 using MarsRoverLib.Service;
 using System;
 using System.Linq;
@@ -30,7 +31,7 @@ namespace MarsRoverProject
             {
                 var X = Convert.ToInt32(startPosition[0]);
                 var Y = Convert.ToInt32(startPosition[1]);
-                var Direction = Enum.Parse<Directions>(startPosition[2]);
+                Directions Direction = DirectionHelper.GetDirection(startPosition[2]).Value;
 
                 var _service = new PositionService(X, Y, Direction);
 
