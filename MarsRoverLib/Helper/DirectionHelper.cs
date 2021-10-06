@@ -62,7 +62,19 @@ namespace MarsRoverLib.Helper
             else
                 return null;
         }
-
+        public static string GetDirectionKey(Directions direction)
+        {
+            if (direction == Directions.North)
+                return "N";
+            else if (direction == Directions.South)
+                return "S";
+            else if (direction == Directions.East)
+                return "E";
+            else if (direction == Directions.West)
+                return "W";
+            else
+                return null;
+        }
 
     }
 }

@@ -38,8 +38,9 @@ namespace MarsRoverLib
                     throw new Exception($"{step} karakteri geçersiz");
             }
 
+            string Direction = DirectionHelper.GetDirectionKey(currentDirection);
 
-            return $"{X} {Y} {currentDirection.ToString()}";
+            return $"{X} {Y} {Direction}";
         }
     }
 }
